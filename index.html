@@ -51,15 +51,15 @@
         ]);
 
         // ------  주문서의 결제 금액이 변경되었을 경우 결제 금액 업데이트 ------
-        //coupon.addEventListener("change", async function () {
-          //if (coupon.checked) {
-            //await widgets.setAmount({
-              //currency: "KRW",
-              //value: 35000 - 5000,
-           // });
+        coupon.addEventListener("change", async function () {
+          if (coupon.checked) {
+            await widgets.setAmount({
+              currency: "KRW",
+              value: 35000 - 5000,
+            });
 
-            //return;
-          //}
+            return;
+          }
 
           await widgets.setAmount({
             currency: "KRW",
